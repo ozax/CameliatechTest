@@ -1,0 +1,25 @@
+{
+  "name": "testct",
+  "version": "1.0.0",
+  "description": "Test Caméliatech api formulaire node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozax/CTtest.git"
+  },
+  "author": "Redha LALLAMI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozax/CTtest/issues"
+  },
+  "homepage": "https://github.com/ozax/CTtest#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1",
+    "touch": "^3.1.0"
+  }
+}
