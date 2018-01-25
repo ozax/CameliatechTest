@@ -2,9 +2,11 @@
 var express = require("express");
 var app = express();
 var port = 3000;
+const v = require('node-input-validator');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
@@ -16,15 +18,17 @@ var CTtest = new mongoose.Schema({
 });
 var User = mongoose.model("User", CTtest);
 
+
+
 app.get("/form", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html" );
 });
 
 app.post("/addcontact", (req, res) => {
     var myData = new User(req.body);
 myData.save()
     .then(item => {
-    res.send("Name saved to database");
+    res.send("Contact added to DB");
 })
 .catch(err => {
     res.status(400).send("Unable to save to database");
